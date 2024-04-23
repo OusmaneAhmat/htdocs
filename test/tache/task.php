@@ -13,7 +13,6 @@
             echo "Connexion réussie à la base de données.";
         }
 
-        
 
         // Fermeture de la connexion
         // mysqli_close($connexion);
@@ -42,7 +41,7 @@
             // Vérification du résultat de la requête
             if ($resultat) { 
                 foreach ($resultat as $task) {
-                    print_r($task);
+                    print_r($task['nom-tache']);
                 }
             } else {
                 echo "Erreur : " . mysqli_error($connexion); 
